@@ -32,9 +32,8 @@ Then open http://localhost:3000.
 
 ## Before you send it
 
-- **Logo:** replace `public/logo-placeholder.svg` with the real 914 Home Renovation
-  logo (used in the sidebar). Any square SVG or PNG works — just keep the same file
-  name or update the `src` in `components/Sidebar.tsx`.
+- **Logo:** the official 914 mark lives at `public/logo.png` (used in the sidebar /
+  mobile nav). Replace that file if they send an updated asset — keep the same name.
 - **Colors:** the palette is defined once in `tailwind.config.ts` under
   `theme.extend.colors` (`brand` = 914 orange `#FF6B00`, `survey` = confirmation green,
   `flag` = urgent red, `ink`/`parchment` = the dark base and light text). Adjust

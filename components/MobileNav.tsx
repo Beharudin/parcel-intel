@@ -25,21 +25,19 @@ export function MobileNav() {
       {open && (
         <div className="fixed inset-0 z-40 flex">
           <div className="flex h-full w-[280px] flex-col border-r border-white/[0.06] bg-ink-900">
-            <div className="flex items-center justify-between border-b border-white/[0.06] px-4 py-4">
-              <div className="flex items-center gap-2.5">
-                <Image
-                  src="/logo-placeholder.svg"
-                  alt="Parcel Intel"
-                  width={30}
-                  height={30}
-                  className="rounded-md"
-                />
-                <p className="font-display font-semibold text-parchment-100">Parcel Intel</p>
-              </div>
+            <div className="flex items-center justify-between gap-3 border-b border-white/[0.06] px-4 py-4">
+              <Image
+                src="/logo.png"
+                alt="914 Home Renovations"
+                width={300}
+                height={48}
+                className="h-8 w-auto max-w-[180px] object-contain object-left"
+                priority
+              />
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Close navigation"
-                className="rounded-md p-1 text-ink-400 hover:text-parchment-100"
+                className="shrink-0 rounded-md p-1 text-ink-400 hover:text-parchment-100"
               >
                 <X size={18} />
               </button>

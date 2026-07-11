@@ -12,23 +12,20 @@ export function Sidebar() {
 
   return (
     <aside className="hidden lg:flex w-[260px] shrink-0 flex-col border-r border-white/[0.06] bg-ink-900/80 backdrop-blur-xl">
-      <div className="flex items-center gap-3 px-5 py-5 border-b border-white/[0.06]">
-        <Image
-          src="/logo-placeholder.svg"
-          alt="Parcel Intel logo"
-          width={36}
-          height={36}
-          className="rounded-lg shadow-glow-soft"
-          priority
-        />
-        <div className="leading-tight min-w-0">
-          <p className="font-display font-semibold text-[15px] tracking-tight text-parchment-100 truncate">
-            Parcel Intel
-          </p>
-          <p className="text-[10px] uppercase tracking-[0.16em] text-ink-400 font-medium">
-            Property CRM
-          </p>
-        </div>
+      <div className="border-b border-white/[0.06] px-4 py-4">
+        <Link href="/" className="block">
+          <Image
+            src="/logo.png"
+            alt="914 Home Renovations"
+            width={300}
+            height={48}
+            className="h-9 w-auto max-w-full object-contain object-left"
+            priority
+          />
+        </Link>
+        <p className="mt-2.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-ink-400">
+          Parcel Intel · Property CRM
+        </p>
       </div>
 
       <nav className="flex-1 overflow-y-auto px-3 py-5 space-y-6">
