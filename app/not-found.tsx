@@ -15,7 +15,7 @@ export default function NotFound() {
           This parcel isn&apos;t in the registry
         </h1>
         <p className="mt-3 text-[13.5px] leading-relaxed text-ink-400">
-          The record you&apos;re looking for doesn&apos;t exist in this demo dataset.
+          The record you&apos;re looking for doesn&apos;t exist in the registry.
         </p>
         <Link href="/" className="btn-ghost mt-8">
           <ArrowLeft size={14} />

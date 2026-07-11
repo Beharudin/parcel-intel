@@ -79,7 +79,7 @@ export function Sidebar() {
             <p className="text-[12.5px] font-semibold text-parchment-100 truncate">
               Beharudin M.
             </p>
-            <p className="text-[10.5px] text-ink-400 truncate">Demo · Frontend MVP</p>
+            <p className="text-[10.5px] text-ink-400 truncate">Frontend Developer</p>
           </div>
         </div>
       </div>

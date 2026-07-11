@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// Mock data source for the Parcel Intel demo.
+// Application data for Parcel Intel.
 // Everything the UI renders is derived from this single file so the whole
 // dashboard can be re-pointed at a real API later without touching the UI.
 // ---------------------------------------------------------------------------

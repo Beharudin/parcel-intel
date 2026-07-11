@@ -23,7 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Parcel Intel — Real Estate Intelligence & CRM",
   description:
-    "A demo real estate intelligence and CRM dashboard: property profiles, owner records, opportunity scoring and lead queues in one workspace.",
+    "Real estate intelligence and CRM dashboard for property profiles, owner records, opportunity scoring, and lead queues.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
