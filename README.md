@@ -1,65 +1,91 @@
-# Parcel Intel — Real Estate Intelligence & CRM (Demo)
+# Parcel Intel
 
-A demo dashboard built for the **Frontend Dashboard Developer / React Next.js** role at
-914 Home Renovation. It mirrors the MVP screens from the job post — dashboard home,
-property profiles, owner profiles, opportunity scoring, and a CRM activity timeline —
-with the remaining screens (Contacts, Queues, CRM Timeline hub, Source Trace, Data
-Quality, Reports, AI Assistant) wired up as "coming soon" stubs reachable from the
-sidebar, so the full information architecture is visible even though only the core
-flows are built out.
+Real estate intelligence and CRM dashboard for organizing property data, owner profiles, contacts, opportunity scoring, and acquisition workflows.
 
-**Stack:** Next.js 14 (App Router) · TypeScript · Tailwind CSS · Recharts · lucide-react
+Built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**.
 
-All data lives in one file, `lib/data.ts`, as typed mock objects — no backend or
-database required. Swapping it for a real API later just means replacing the
-functions at the bottom of that file.
+## Features
 
-## Run it locally
+- **Dashboard** — network-wide stats, opportunity score trend, lead sources, top opportunities, and recent CRM activity
+- **Properties** — searchable, filterable, sortable table with pagination and full property detail pages
+- **Owners** — owner/company registry with contact status, data confidence, linked parcels, and CRM timeline
+- **Workflow screens** — Contacts, Opportunity Queues, CRM Timeline, Source Trace, Data Quality, Reports, and AI Assistant (placeholders ready for expansion)
+
+## Tech stack
+
+| Layer | Tools |
+| --- | --- |
+| Framework | Next.js 14 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| Charts | Recharts |
+| Icons | lucide-react |
+
+Application data is typed and centralized in `lib/data.ts`, so the UI can later connect to a real API without rewriting screens.
+
+## Requirements
+
+- Node.js 18 or later
+- npm 9 or later
+
+## Installation
 
 ```bash
+git clone https://github.com/YOUR_USERNAME/parcel-intel.git
+cd parcel-intel
 npm install
+```
+
+## Development
+
+```bash
 npm run dev
 ```
 
-Then open http://localhost:3000.
+Open [http://localhost:3000](http://localhost:3000).
 
-## Deploy to Vercel (free)
+## Scripts
 
-1. Push this project to a GitHub repo.
-2. Go to [vercel.com/new](https://vercel.com/new), import the repo, and click Deploy.
-   No environment variables or build config needed — Vercel detects Next.js automatically.
-3. You'll get a live `*.vercel.app` URL to send along with your application.
-
-## Before you send it
-
-- **Logo:** the official 914 mark lives at `public/logo.png` (used in the sidebar /
-  mobile nav). Replace that file if they send an updated asset — keep the same name.
-- **Colors:** the palette is defined once in `tailwind.config.ts` under
-  `theme.extend.colors` (`brand` = 914 orange `#FF6B00`, `survey` = confirmation green,
-  `flag` = urgent red, `ink`/`parchment` = the dark base and light text). Adjust
-  the hex values there if you want to match a refreshed brand kit later.
-- **Copy:** page titles, empty states and the "coming soon" descriptions are all in
-  `lib/nav.ts` and the individual `app/**/page.tsx` files if you want to tweak tone.
-
-## What's built vs. stubbed
-
-| Screen | Status |
+| Command | Description |
 | --- | --- |
-| Dashboard home | Built — stats, opportunity trend, lead source mix, top opportunities, recent activity |
-| Properties list + detail | Built — search, status filter, sortable columns, pagination, full property + owner + timeline view |
-| Owners list + detail | Built — search, type filter, sortable columns, pagination, linked properties + timeline |
-| Contacts, Opportunity Queues, CRM Timeline hub, Source Trace, Data Quality, Reports, AI Assistant | Stubbed "coming soon" screens, reachable from the sidebar, each describing what it will do |
+| `npm run dev` | Start the development server |
+| `npm run build` | Create a production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | Run ESLint |
+
+## Deploy on Vercel
+
+1. Push the repository to GitHub.
+2. Import the project at [vercel.com/new](https://vercel.com/new).
+3. Deploy — no environment variables are required for the current setup.
 
 ## Project structure
 
 ```
-app/                Route segments (App Router)
-  page.tsx           Dashboard home
-  properties/        Properties list + [id] detail
-  owners/            Owners list + [id] detail
-  contacts/, queues/, crm-timeline/, source-trace/,
-  data-quality/, reports/, ai-assistant/   "Coming soon" stubs
-components/         Shared UI (Sidebar, Topbar, tables, charts, stamp badge)
-lib/data.ts         Single source of mock data + typed helpers
-lib/nav.ts          Sidebar navigation config
+app/                 App Router pages
+  page.tsx           Dashboard
+  properties/        Properties list and detail
+  owners/            Owners list and detail
+  contacts/          Contacts (coming soon)
+  queues/            Opportunity queues (coming soon)
+  crm-timeline/      CRM timeline hub (coming soon)
+  source-trace/      Source trace (coming soon)
+  data-quality/      Data quality (coming soon)
+  reports/           Reports (coming soon)
+  ai-assistant/      AI assistant (coming soon)
+components/          Shared UI, tables, charts, layout shell
+lib/data.ts          Typed data models and helpers
+lib/nav.ts           Sidebar navigation config
+public/logo.png      Brand logo
 ```
+
+## Customization
+
+- **Logo** — replace `public/logo.png` (keep the same filename)
+- **Colors** — update tokens in `tailwind.config.ts` (`brand`, `survey`, `flag`, `ink`, `parchment`)
+- **Navigation labels** — edit `lib/nav.ts`
+- **Data** — edit or replace exports in `lib/data.ts`
+
+## License
+
+Private project. All rights reserved.
