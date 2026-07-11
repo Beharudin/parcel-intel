@@ -53,11 +53,14 @@ Open [http://localhost:3000](http://localhost:3000).
 | `npm run start` | Serve the production build |
 | `npm run lint` | Run ESLint |
 
-## Deploy on Vercel
+## Deploy on Render (Static Site)
 
 1. Push the repository to GitHub.
-2. Import the project at [vercel.com/new](https://vercel.com/new).
-3. Deploy — no environment variables are required for the current setup.
+2. Create a **Static Site** on [render.com](https://render.com).
+3. Use these settings:
+   - **Build Command:** `npm install; npm run build`
+   - **Publish Directory:** `out`
+4. Deploy — no environment variables are required.
 
 ## Project structure
 
